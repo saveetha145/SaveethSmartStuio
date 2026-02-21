@@ -456,12 +456,19 @@ body {
 }
 
 .contact-item {
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px 15px;
+    border-radius: 15px;
     transition: all 0.4s;
     position: relative;
     z-index: 1;
     animation: contactGlow 3s infinite;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes contactGlow {
@@ -470,19 +477,45 @@ body {
 }
 
 .contact-item:hover {
-    transform: translateY(-5px) scale(1.05);
-    background: rgba(255, 215, 0, 0.1);
+    transform: translateY(-8px) scale(1.05);
+    background: rgba(255, 215, 0, 0.15);
+    border-color: rgba(255, 215, 0, 0.5);
 }
 
 .contact-item i {
     color: var(--primary-gold);
-    margin-right: 10px;
-    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-size: 2rem;
     transition: transform 0.4s;
+    display: block;
+}
+
+.contact-item span {
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 .contact-item:hover i {
     transform: rotate(360deg);
+}
+
+.phone-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.phone-label {
+    font-size: 0.85rem;
+    color: var(--primary-gold);
+    font-weight: 600;
+}
+
+.phone-number {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
 }
 
 /* ===== WHATSAPP BUTTON ===== */
@@ -561,6 +594,13 @@ footer {
     
     .contact-item {
         font-size: 14px;
+        padding: 18px 12px;
+        min-height: 110px;
+    }
+    
+    .contact-item i {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
     }
     
     .whatsapp img {
@@ -590,8 +630,18 @@ footer {
     }
     
     .contact-item {
-        font-size: 12px;
-        padding: 10px;
+        font-size: 13px;
+        padding: 15px 10px;
+        min-height: 100px;
+    }
+    
+    .contact-item i {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+    
+    .contact-item span {
+        line-height: 1.5;
     }
     
     .whatsapp {
@@ -641,4 +691,25 @@ footer {
         opacity: 0;
         visibility: hidden;
     }
+}
+
+.phone-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-numbers span {
+    margin-bottom: 4px;
+}
+
+.office-number {
+    font-weight: 600;
+    color: var(--primary-gold);
 }
